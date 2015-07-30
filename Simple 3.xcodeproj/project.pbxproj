@@ -14,6 +14,10 @@
 		BAF065731B6A34B9009C44C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF065721B6A34B9009C44C1 /* Images.xcassets */; };
 		BAF065761B6A34B9009C44C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAF065741B6A34B9009C44C1 /* LaunchScreen.xib */; };
 		BAF065821B6A34B9009C44C1 /* Simple_3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF065811B6A34B9009C44C1 /* Simple_3Tests.m */; };
+		BAF0658D1B6A3802009C44C1 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF0658C1B6A3802009C44C1 /* TableViewController.m */; };
+		BAF065901B6A4392009C44C1 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF0658F1B6A4392009C44C1 /* ModalViewController.m */; };
+		BAF065931B6A549F009C44C1 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF065921B6A549F009C44C1 /* Item.m */; };
+		BAF065971B6A649A009C44C1 /* MyViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF065961B6A649A009C44C1 /* MyViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,14 @@
 		BAF0657B1B6A34B9009C44C1 /* Simple 3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple 3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF065801B6A34B9009C44C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAF065811B6A34B9009C44C1 /* Simple_3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Simple_3Tests.m; sourceTree = "<group>"; };
+		BAF0658B1B6A3802009C44C1 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		BAF0658C1B6A3802009C44C1 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		BAF0658E1B6A4392009C44C1 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		BAF0658F1B6A4392009C44C1 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		BAF065911B6A549F009C44C1 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		BAF065921B6A549F009C44C1 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		BAF065951B6A649A009C44C1 /* MyViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewCell.h; sourceTree = "<group>"; };
+		BAF065961B6A649A009C44C1 /* MyViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +93,17 @@
 		BAF065641B6A34B9009C44C1 /* Simple 3 */ = {
 			isa = PBXGroup;
 			children = (
+				BAF065941B6A644E009C44C1 /* Cells */,
 				BAF065691B6A34B9009C44C1 /* AppDelegate.h */,
 				BAF0656A1B6A34B9009C44C1 /* AppDelegate.m */,
 				BAF0656C1B6A34B9009C44C1 /* ViewController.h */,
 				BAF0656D1B6A34B9009C44C1 /* ViewController.m */,
+				BAF0658E1B6A4392009C44C1 /* ModalViewController.h */,
+				BAF0658F1B6A4392009C44C1 /* ModalViewController.m */,
+				BAF065911B6A549F009C44C1 /* Item.h */,
+				BAF065921B6A549F009C44C1 /* Item.m */,
+				BAF0658B1B6A3802009C44C1 /* TableViewController.h */,
+				BAF0658C1B6A3802009C44C1 /* TableViewController.m */,
 				BAF0656F1B6A34B9009C44C1 /* Main.storyboard */,
 				BAF065721B6A34B9009C44C1 /* Images.xcassets */,
 				BAF065741B6A34B9009C44C1 /* LaunchScreen.xib */,
@@ -117,6 +136,15 @@
 				BAF065801B6A34B9009C44C1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BAF065941B6A644E009C44C1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BAF065951B6A649A009C44C1 /* MyViewCell.h */,
+				BAF065961B6A649A009C44C1 /* MyViewCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,9 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF065931B6A549F009C44C1 /* Item.m in Sources */,
 				BAF0656E1B6A34B9009C44C1 /* ViewController.m in Sources */,
 				BAF0656B1B6A34B9009C44C1 /* AppDelegate.m in Sources */,
+				BAF065901B6A4392009C44C1 /* ModalViewController.m in Sources */,
+				BAF065971B6A649A009C44C1 /* MyViewCell.m in Sources */,
 				BAF065681B6A34B9009C44C1 /* main.m in Sources */,
+				BAF0658D1B6A3802009C44C1 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Simple 3/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -360,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Simple 3/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic,weak) IBOutlet UITextView *textView;
+-(void) sendData:(NSString *)data;
 
 @end
 
